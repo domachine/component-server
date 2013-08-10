@@ -24,7 +24,8 @@
     "url": "https://github.com/domachine/component-server/issues"
   },
   "dependencies": {
-    "express": "~3.3.4"
+    "express": "~3.3.4",
+    "git-object": "0.0.2"
   },
   "devDependencies": {
     "chai": "~1.7.2",

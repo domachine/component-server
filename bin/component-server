@@ -6,6 +6,6 @@
 
 var app = require('..');
 
-app.set('root', 'test');
+app.set('root', '..');
 app.listen(3000);
 console.log('Server listening on port 3000');
