@@ -4,8 +4,22 @@
  * Module dependencies.
  */
 
-var app = require('..');
+var program = require('commander')
+  , app = require('..');
 
-app.set('root', '..');
-app.listen(3000);
-console.log('Server listening on port 3000');
+// usage
+
+program
+  .version(require('../package').version)
+  .option('-p,--port <port>', 'port to listen on', 3000, parseInt)
+  .option('-r,--root <root>', 'root of the repositories', '..');
+
+// parse command line
+
+program.parse(process.argv);
+app.set('root', program.root);
+
+// kickoff
+
+app.listen(program.port);
+console.log('Server listening on port', program.port);
