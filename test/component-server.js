@@ -5,15 +5,16 @@
 
 var express = require('express')
   , request = require('supertest')
-  , app = require('..');
+  , server = require('..');
 
 /**
  * Tests.
  */
 
 describe('ComponentServer', function(){
+  var app;
   before(function(){
-    app.set('root', '..');
+    app = server('..');
   });
   it('should serve the test file', function(done){
     request(app)

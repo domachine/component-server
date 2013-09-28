@@ -5,7 +5,8 @@
  */
 
 var program = require('commander')
-  , app = require('..');
+  , express = require('express')
+  , server = require('..');
 
 // usage
 
@@ -17,7 +18,12 @@ program
 // parse command line
 
 program.parse(process.argv);
-app.set('root', program.root);
+
+// create app
+
+var app = express();
+app.use(express.logger('dev'));
+app.use(server(program.root));
 
 // kickoff
 
