@@ -18,7 +18,7 @@ describe('ComponentServer', function(){
   });
   it('should serve the test file', function(done){
     request(app)
-      .get('/component-server/master/test/test-file.txt')
+      .get('/component-serve-repos/master/test/test-file.txt')
       .expect('Test data\n', done);
   });
 });

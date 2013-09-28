@@ -1,5 +1,5 @@
 {
-  "name": "component-server",
+  "name": "component-serve-repos",
   "version": "0.0.1",
   "description": "Server to serve private component repositories.",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "test"
   },
   "bin": [
-    "bin/component-server"
+    "bin/component-serve-repos"
   ],
   "scripts": {
     "test": "make test"
