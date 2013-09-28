@@ -6,6 +6,9 @@
   "directories": {
     "test": "test"
   },
+  "bin": [
+    "bin/component-server"
+  ],
   "scripts": {
     "test": "make test"
   },
